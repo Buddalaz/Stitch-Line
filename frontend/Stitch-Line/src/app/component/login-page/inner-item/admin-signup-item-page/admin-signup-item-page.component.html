@@ -1,0 +1,56 @@
+<div class="outer">
+  <form class="example-form" [formGroup]="signUpForm" (ngSubmit)="register()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput formControlName="fName">
+      <mat-error *ngIf="signUpForm.get('fName')?.touched && signUpForm.get('fName')?.invalid">
+        Please enter first name
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email"
+             placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>mobile</mat-label>
+      <input type="number" matInput formControlName="mobile">
+      <mat-error *ngIf="signUpForm.get('mobile')?.touched && signUpForm.get('mobile')?.invalid">
+        Please enter mobile Number
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>NIC</mat-label>
+      <input type="text" matInput formControlName="nic">
+      <mat-error *ngIf="signUpForm.get('nic')?.touched && signUpForm.get('nic')?.invalid">
+        Please enter nic
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>employee number</mat-label>
+      <input type="text" matInput formControlName="empNum">
+      <mat-error *ngIf="signUpForm.get('empNum')?.touched && signUpForm.get('empNum')?.invalid">
+        Please enter employee Number
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>username</mat-label>
+      <input type="text" matInput formControlName="username">
+      <mat-error *ngIf="signUpForm.get('username')?.touched && signUpForm.get('username')?.invalid">
+        Please enter username
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password">
+      <mat-error *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.invalid">
+        Please enter password
+      </mat-error>
+    </mat-form-field>
+    <button [disabled]="signUpForm.invalid" mat-raised-button class="sign-in-button">Register</button>
+<!--    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>-->
+  </form>
+</div>
