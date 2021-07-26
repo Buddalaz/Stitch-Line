@@ -1,0 +1,28 @@
+.main-wrapper{
+  background-color: red;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span{
+    font-weight: bold;
+    color: #ecf0f1;
+    font-size: 20px;
+    padding-left: 50px;
+  }
+
+  ul{
+    list-style: none;
+    font-size: 15px;
+
+    li{
+      display: inline-block;
+      padding-right: 30px;
+      cursor: pointer;
+    }
+
+  }
+
+
+}

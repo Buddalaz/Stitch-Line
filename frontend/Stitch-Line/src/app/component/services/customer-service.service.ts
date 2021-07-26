@@ -13,15 +13,22 @@ export class CustomerServiceService {
 
   constructor(private http: HttpClient) { }
 
+
+
   register(dto: CustomerDTO): Observable<any>{
+
+    const customer = {
+      address:dto.customer.address
+    };
+
     return this.http.post(this.baseUrl+'user',{
       name:dto.fName,
       email:dto.email,
       mobile:dto.mobile,
-      userRole:dto.userRole,
       username:dto.username,
       password:dto.password,
-      customer:dto.customer
+      userRole:dto.userRole,
+      customer:customer
     },{
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

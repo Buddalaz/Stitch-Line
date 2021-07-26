@@ -1,11 +1,10 @@
 <div class="outer">
-  <form class="example-form" [formGroup]="loginForm">
+  <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()">
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Email</mat-label>
-      <input type="email" matInput formControlName="email"
-             placeholder="Ex. pat@example.com">
-      <mat-error *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
-        Please enter a valid email address
+      <mat-label>username</mat-label>
+      <input type="text" matInput formControlName="username">
+      <mat-error *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+        Please enter a valid user name
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
